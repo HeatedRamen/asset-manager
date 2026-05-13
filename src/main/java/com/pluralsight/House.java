@@ -61,4 +61,9 @@ public class House extends Asset{
 
         return value;
     }
+
+    @Override
+    public String toString() {
+        return "Size: " + getSquareFoot() + "sq ft " + "\nValue: " + getValue();
+    }
 }

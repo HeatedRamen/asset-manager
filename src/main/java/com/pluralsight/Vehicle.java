@@ -12,9 +12,9 @@ public class Vehicle extends Asset{
         odometer = 0;
     }
 
-    Vehicle (String description, String dateAcquired, double originalPrice, String makemModel, int year, int odometer) {
+    Vehicle (String description, String dateAcquired, double originalPrice, String makeModel, int year, int odometer) {
         super(description, dateAcquired, originalPrice);
-        this.makeModel = makemModel;
+        this.makeModel = makeModel;
         this.year = year;
         this.odometer = odometer;
 
@@ -53,4 +53,8 @@ public class Vehicle extends Asset{
         return getOriginalCost() * valueMultiple;
     }
 
+    @Override
+    public String toString() {
+        return "Make/Model: " + makeModel + " Price: " + getOriginalCost() + " Odometer miles: " + odometer;
+    }
 }
